@@ -5,16 +5,21 @@ from flask import Flask
 
 # import your classes
 from handlers import page
+from handlers.admin import admin
 
 app = Flask(__name__)
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
 
-#for index page
+#for most pages
 app.add_url_rule(r'/support', view_func=page.Support.as_view('support'))
 
 app.add_url_rule(r'/', view_func=page.Index.as_view('index'))
+
+#for admin pages
+app.add_url_rule(r'/admin', view_func=admin.AdminPage.as_view('admin_page'))
+
 
 
 @app.errorhandler(404)
