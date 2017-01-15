@@ -2,15 +2,19 @@
 
 # Import the Flask Framework
 from flask import Flask
+
+# import your classes
+from handlers import page
+
 app = Flask(__name__)
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
 
-@app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+#for index page
+app.add_url_rule(r'/support', view_func=page.Support.as_view('support'))
+
+app.add_url_rule(r'/', view_func=page.Index.as_view('index'))
 
 
 @app.errorhandler(404)
