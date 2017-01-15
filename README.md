@@ -86,4 +86,5 @@ See [LICENSE](LICENSE)
 
 ## Author
 Logan Henriquez and Johan Euphrosine (Original)
+
 Updated by Chuck
