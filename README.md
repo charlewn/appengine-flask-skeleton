@@ -85,4 +85,5 @@ See [CONTRIB.md](CONTRIB.md)
 See [LICENSE](LICENSE)
 
 ## Author
-Logan Henriquez and Johan Euphrosine
+Logan Henriquez and Johan Euphrosine (Original)
+Updated by Chuck
